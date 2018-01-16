@@ -3,39 +3,95 @@ import React, { Component} from 'react';
 export default class Dashboard extends Component {
     render(){
         return(
-            <div className="content-wrapper">
-            <section className="content-header">
-                <div className="row">
-                    <div className="col-md-12">
-                        <div className="box">
-                            <div className="box-header with-border">
-                                <h3 className="box-title">Monthly Recap Report</h3>
-                            </div>
-                            <div className="box-body">
-                                <div className="row">
-                                    <div className="col-md-8">
-                                        <p className="text-center">
-                                            <strong>This is text</strong>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="box-footer">
-                                <div className="row">
-                                    <div className="col-sm-3 col-xs-6">
-                                        <div className="description-block border-right">
-                                            <span className="description-percentage text-green"><i className="fa fa-caret-up"></i> 17%</span>
-                                            <h5 className="description-header">$35,210.43</h5>
-                                            <span className="description-text">TOTAL REVENUE</span>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="content-wrapper">
+            <section class="content-header">
+            <h1>
+                Calendar
+                <small>Control panel</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Calendar</li>
+            </ol>
             </section>
+            <section class="content">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h4 class="box-title">Draggable Events</h4>
+            </div>
+            <div class="box-body">
+            
+              <div id="external-events">
+                <div class="external-event bg-green">Lunch</div>
+                <div class="external-event bg-yellow">Go home</div>
+                <div class="external-event bg-aqua">Do homework</div>
+                <div class="external-event bg-light-blue">Work on UI design</div>
+                <div class="external-event bg-red">Sleep tight</div>
+                <div class="checkbox">
+                  <label for="drop-remove">
+                    <input type="checkbox" id="drop-remove" />
+                    remove after drop
+                  </label>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+         
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Create Event</h3>
+            </div>
+            <div class="box-body">
+              <div class="btn-group" styles={{width: '100%', marginBottom: '10px'}}>
+            
+                <ul class="fc-color-picker" id="color-chooser">
+                  <li><a class="text-aqua" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-blue" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-light-blue" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-teal" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-yellow" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-orange" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-green" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-lime" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-red" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-purple" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-fuchsia" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-muted" href="#"><i class="fa fa-square"></i></a></li>
+                  <li><a class="text-navy" href="#"><i class="fa fa-square"></i></a></li>
+                </ul>
+              </div>
+              
+              <div class="input-group">
+                <input id="new-event" type="text" class="form-control" placeholder="Event Title" />
+
+                <div class="input-group-btn">
+                  <button id="add-new-event" type="button" class="btn btn-primary btn-flat">Add</button>
+                </div>
+               
+              </div>
+              
+            </div>
+          </div>
         </div>
+       
+        <div class="col-md-9">
+          <div class="box box-primary">
+            <div class="box-body no-padding">
+             
+              <div id="calendar"></div>
+                </div>
+           
+               </div>
+       
+              </div>
+       
+            </div>
+        </section>
+     </div>
+          
         )
     }
 }
